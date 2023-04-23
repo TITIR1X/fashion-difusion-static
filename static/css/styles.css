@@ -1,0 +1,399 @@
+* {
+    box-sizing: border-box;
+    outline: none;
+}
+
+:root {
+    --bg-color: #000000;
+    --secondary-color: #8e92a4;
+    --color-primary: #fbefef;
+    --rainbow-v-color: linear-gradient(to right, rgb(253, 120, 255), rgb(253, 160, 255), rgb(254, 177, 255), rgb(253, 160, 255), rgb(253, 120, 255));
+    --rainbow-fb-color-1: linear-gradient(to right, #3b5998, #8b9dc3, #dfe3ee, #8b9dc3, #3b5998);
+    --rainbow-ig-color-1: linear-gradient(to right, #833ab4, #e1306c, #fcaf45, #e1306c, #833ab4);
+    --rainbow-ig-color-2: linear-gradient(to right, #833ab4, #e1306c, #fcaf45, #e1306c, #833ab4) 1;
+}
+
+@keyframes rainbow {
+
+    0% {
+        background-position: 0% 100%;
+    }
+
+    25% {
+        background-position: 100% 50%;
+    }
+
+    50% {
+        background-position: 0% 100%;
+    }
+
+    75% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 100%;
+    }
+
+}
+
+::selection {
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+.top-part-header .count,
+.top-part-header,
+.top-part .count,
+.top-part,
+.item,
+body {
+    display: flex;
+    align-items: center;
+}
+
+body {
+    margin: 0;
+    justify-content: center;
+    flex-direction: column;
+    overflow: auto;
+    width: 100%;
+    height: 100vh;
+    padding: 0 10px;
+    font-family: "DM Sans", sans-serif;
+    font-size: 16px;
+
+    background-image: var(--rainbow-ig-color-1);
+    background-size: 400% auto;
+    animation: rainbow 96s linear infinite;
+}
+
+@keyframes rainbow {
+    0% {
+        background-position: center top;
+    }
+
+    25% {
+        background-position: right center;
+    }
+
+    50% {
+        background-position: center bottom;
+    }
+
+    75% {
+        background-position: left center;
+    }
+
+    100% {
+        background-position: center top;
+    }
+}
+
+
+.page {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100vh;
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 0.3px 2.2px rgba(0, 0, 0, 0.011), 0 0.7px 5.3px rgba(0, 0, 0, 0.016), 0 1.3px 10px rgba(0, 0, 0, 0.02), 0 2.2px 17.9px rgba(0, 0, 0, 0.024), 0 4.2px 33.4px rgba(0, 0, 0, 0.029), 0 10px 80px rgba(0, 0, 0, 0.04);
+    overflow: hidden;
+}
+
+
+.page-content {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-color);
+    flex: 1;
+    transition: 0.2s;
+    overflow-y: scroll;
+}
+
+.page-content .header {
+    font-size: 26px;
+    color: var(--main-color);
+}
+
+.nav-item {
+    margin-top: 100px;
+    display: none;
+}
+
+.content-categories {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    padding: 20px 0;
+    border-bottom: 1px solid transparent;
+    border-image: var(--rainbow-ig-color-2);
+}
+
+#opt-1:checked+label,
+#opt-2:checked+label,
+#opt-3:checked+label,
+#opt-4:checked+label {
+    padding: 10px;
+    border-bottom: 1px solid transparent;
+    border-image: var(--rainbow-ig-color-2);
+}
+
+button {
+    border: none;
+}
+
+
+
+.side-wrapper {
+    padding: 25px 40px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.side-wrapper:last-child {
+    border-bottom: none;
+}
+
+
+label {
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 10px;
+}
+
+.lr {
+    text-decoration: none;
+    color: var(--secondary-color);
+}
+
+.lr-active {
+    text-decoration: none;
+    color: var(--color-primary);
+}
+
+.upload-btn,
+.fb-btn,
+.ig-btn {
+    padding: 12px;
+    border-radius: 8px;
+    /*background: var(--rainbow-ig-color-1);
+    background-size: 400% auto;
+    animation: rainbow 36s linear infinite;*/
+    background-color: #00000076;
+    border: 1px solid #67676776;
+}
+
+.upload-btn {
+    padding: 10px 15px;
+    border-radius: 8px;
+    /*background: var(--rainbow-ig-color-1);
+    background-size: 400% auto;
+    animation: rainbow 36s linear infinite;*/
+    background-color: #00000076;
+    border: 1px solid #67676776;
+}
+
+.upload-btn:hover,
+.fb-btn:hover,
+.ig-btn:hover {
+    background-color: #0000005e;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.ig-btn a {
+    padding: 12px;
+    text-decoration: none;
+    font-weight: 900;
+    background: var(--rainbow-ig-color-1);
+    background-size: 300% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: rainbow 16s linear infinite;
+}
+
+.fb-btn a {
+    padding: 12px;
+    text-decoration: none;
+    font-weight: 900;
+    background: var(--rainbow-fb-color-1);
+    background-size: 300% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: rainbow 16s linear infinite;
+}
+
+.upload-btn a {
+    text-decoration: none;
+    font-weight: 900;
+    background: var(--color-primary);
+    background-size: 300% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: rainbow 16s linear infinite;
+}
+
+.btn-title {
+    margin-top: 50px;
+    color: white;
+    font-weight: 900;
+    margin-right: 50px;
+}
+
+.header-content {
+    margin-top: -11px;
+    text-align: center;
+    background-size: cover;
+    padding: 75px;
+}
+
+.in-title-div {
+    margin-top: 100px;
+    margin-bottom: -70px;
+}
+
+.in-title {
+    margin-right: 300px;
+    font-size: 26px;
+    font-weight: 700;
+    background: var(--rainbow-v-color);
+    background-size: 300% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: rainbow 16s linear infinite;
+
+    cursor: default;
+}
+
+.title {
+    margin-bottom: -20px;
+    font-size: 64px;
+    font-weight: 900;
+    color: white;
+}
+
+.subtitle {
+    margin-right: -275px;
+    font-size: 32px;
+    font-weight: 700;
+    color: white;
+    cursor: pointer;
+}
+
+.actions {
+    padding: 12px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.circle {
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    background-color: #fe4d46;
+    box-shadow: 14px 0 0 0 #fbc023, 28px 0 0 0 #7dd21f;
+}
+
+.slogan {
+    padding: 20px 0px;
+    margin-top: -45px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+    color: rgb(0, 0, 0);
+    background-color: white;
+    cursor: default;
+}
+
+.header {
+    background-color: white;
+}
+
+.subtitle-2 {
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+}
+
+.cdf {
+    cursor: default;
+}
+
+.content {
+    margin: 0 50px;
+    color: white;
+}
+
+.local-option {
+    display: flex;
+    justify-content: space-around;
+}
+
+.clarification {
+    display: inline-block;
+    padding: 0 20px;
+    margin: 15px 30%;
+    background-color: #0000003e;
+    border-radius: 6px;
+}
+
+.clarification a {
+    font-weight: 900;
+    color: var(--color-primary);
+}
+
+.clarification p {
+    color: var(--color-primary);
+}
+
+
+@media screen and (max-width: 1200px) {
+    .right-bar {
+        display: none;
+    }
+
+    .incoming-header,
+    .incoming {
+        display: block;
+    }
+
+    .incoming-task-bar-header {
+        display: inline;
+    }
+
+}
+
+/*700*/
+@media screen and (max-width: 960px) {
+    .task-manager {
+        flex-direction: column;
+        overflow-y: auto;
+    }
+
+    .clarification {
+        margin: 15px 30px;
+    }
+
+    .incoming-header,
+    .incoming-task-bar-header,
+    .page-content {
+        width: 100%;
+        display: block;
+    }
+
+    .tasks-wrapper {
+        height: auto;
+    }
+
+}
+
+
+@media screen and (max-width: 620px) {
+    .nav-div {
+        justify-content: space-between;
+    }
+}
