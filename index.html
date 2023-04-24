@@ -2,7 +2,7 @@
 <html lang="en" >
   <head>
     <meta charset="UTF-8">
-    <title><b>Fashion Difusión</b></title>
+    <title></title>
     <link rel="stylesheet" href="../static/css/styles.css">
   </head>
   <body>
@@ -34,9 +34,11 @@
           <p class="btn-title">Upload your images:</p>
           <button class="ig-btn"><a href="#" target="blank">Instagram</a></button>
           <button class="fb-btn"><a href="#" target="blank">Facebook</a></button>
-          <p class="subtitle-2 cdf">Upload 16 photos of yourself to train an AI model to generate professional images of the dresses in store. You'll be able to see how the dresses look on you, plus you'll get great photos of yourself.</p>
-
-          <p class="subtitle-2 cdf" style="display: inline-block; margin-right: 10px;">Or upload your images from your device:</p>
+          <div class="text-container">
+            <p class="subtitle-2 cdf">See how the dresses fit before you buy them!</p>
+            <p class="subtitle-3 cdf">Upload 16 photos of yourself to train an AI model to generate professional images of the dresses in store. You'll be able to see how the dresses look on you, plus you'll get great photos of yourself.</p>
+          </div>
+          <p class="subtitle-3 cdf" style="display: inline-block; margin-right: 10px;">Or upload your images from your device:</p>
           <button class="upload-btn" style="display: inline-block;"><a href="#" target="blank">Upload images</a></button>  
           <div class="clarification">
             <p>By clicking on any button, you agree to our <a href="#privacy-policy">Privacity Policy</a>, <a href="#terms-of-service">Terms and conditions</a> and <a href="#cookie-policy">Cookie Policy.</a>You may receive SMS notifications from us and you can unsubscribe at any time.</p>
@@ -45,7 +47,7 @@
         </div>
 
         <div>
-          <div class="content-categories">
+          <div class="content-sections">
             <div class="label-wrapper">
               <input class="nav-item" type="radio" id="opt-1" checked onclick="location.href='#privacy-policy'">
               <label class="category" for="opt-1"><a class="lr-active" href="#privacy-policy">Privacy Policy</a></label>
@@ -107,7 +109,7 @@
           </div>
         </section>
 
-        <div class="content-categories"></div>
+        <div class="content-space"></div>
 
         <section id="terms-of-service">
           <div class="content">
@@ -154,7 +156,7 @@
 
         </section>
 
-        <div class="content-categories"></div>
+        <div class="content-space"></div>
 
         <section id="cookie-policy">
 
@@ -188,3 +190,17 @@
     </div>
   </body>
 </html>
+
+<script>
+
+var ScrollMsg= "Fashion Difusión | Smart e-commerce "
+var CharacterPosition=0;
+
+function StartScrolling() {
+document.title=ScrollMsg.substring(CharacterPosition,ScrollMsg.length)+
+ScrollMsg.substring(0, CharacterPosition);
+CharacterPosition++;
+if(CharacterPosition > ScrollMsg.length) CharacterPosition=0;
+window.setTimeout("StartScrolling()",330); }
+StartScrolling();
+</script>
